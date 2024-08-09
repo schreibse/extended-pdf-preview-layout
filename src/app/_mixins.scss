@@ -1,0 +1,37 @@
+@mixin flex-container-max-size {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+
+@mixin grid-module-container(
+  $columns: null,
+  $rows: null,
+  $gap: null,
+  $margin: null,
+  $padding: null,
+  $margin-inner: 2px,
+  $background-color-inner: #fff
+) {
+  margin: $margin;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+  row-gap: $gap;
+  column-gap: $gap;
+  overflow: auto;
+
+  > * {
+    margin: $margin-inner;
+    padding: $padding;
+    overflow: auto;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024,
+    0 1px 3px #0000001f;
+    background-color: $background-color-inner;
+  }
+}

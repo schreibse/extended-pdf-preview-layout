@@ -1,0 +1,6 @@
+@use './../../mixins' as mixins;
+
+:host,
+.mat-mdc-tab-group {
+  @include mixins.flex-container-max-size;
+}

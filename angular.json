@@ -29,9 +29,36 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.js",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*.min.mjs",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/",
+                "ignore": ["**/*es5.*"]
+              },
+              {
+                "glob": "**/locale.json",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/locale",
+                "output": "/assets/locale"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/locale/de",
+                "output": "/assets/locale/de"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/locale/en-US",
+                "output": "/assets/locale/en-US"
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -91,6 +118,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []

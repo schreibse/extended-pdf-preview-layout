@@ -1,0 +1,33 @@
+@use './mixins' as mixins;
+
+html, body { height: 100%; }
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-spacing: 0;
+    font-size: var(--font-size);
+    font-family: var(--font-family), serif;
+    font-weight: normal;
+    list-style: none outside none;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    scrollbar-width: thin;
+  }
+
+
+.mat-mdc-tab-body-wrapper,
+.mat-mdc-tab-body {
+  @include mixins.flex-container-max-size;
+}
