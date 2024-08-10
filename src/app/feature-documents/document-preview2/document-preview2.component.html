@@ -1,0 +1,7 @@
+@if(safePdf$ | async; as safePdf) {
+<object class="preview-pdf"
+        type="application/pdf"
+        [data]="safePdf"
+        (load)="handleLoadComplete()"></object>
+
+}
